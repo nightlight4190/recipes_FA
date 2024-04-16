@@ -40,8 +40,6 @@ class _RecipeDetailState extends State<RecipeDetail> {
               widget.recipe.label,
               style: TextStyle(fontSize: 18),
             ),
-
-            //TODO: Add expanded
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.all(7),
@@ -49,11 +47,9 @@ class _RecipeDetailState extends State<RecipeDetail> {
                 itemBuilder: (BuildContext context, int index) {
                   final ingredient = widget.recipe.ingredients[index];
 
-                  //TODO: Add ingredient.quantity
-                  return Text("""
-                      ${ingredient.quantity}
-                      ${ingredient.measure}
-                      ${ingredient.name}""");
+                  return Text('${ingredient.quantity * _sliderVal} '
+                      '${ingredient.measure} '
+                      '${ingredient.name}');
                 },
               ),
             ),
