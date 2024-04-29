@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = ThemeData();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Recipe Calculator',
       theme: ThemeData(
           colorScheme: theme.colorScheme.copyWith(
